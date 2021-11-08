@@ -1,0 +1,13 @@
+# Environment
+.env
+
+# Compiled JS
+dist
+
+# Dependencies
+node_modules
+
+# Project files
+server.js
+reference
+sandbox
