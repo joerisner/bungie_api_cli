@@ -1,10 +1,9 @@
-import { get } from 'https';
+import { get, RequestOptions } from 'https';
 import dotenv from 'dotenv';
 dotenv.config();
 
-const getManifest = () => {
-  // Add interface
-  const options: Object = {
+const getManifestUrl = () => {
+  const options: RequestOptions = {
     hostname: process.env.HOST_NAME,
     headers: { 'X-API-KEY': process.env.API_KEY },
     path: '/Platform/Destiny2/Manifest/',
@@ -24,4 +23,4 @@ const getManifest = () => {
   }).on('error', (e) => console.error(e));
 };
 
-getManifest();
+getManifestUrl();

@@ -1,10 +1,9 @@
-import { get } from 'https';
+import { get, RequestOptions } from 'https';
 import dotenv from 'dotenv';
 dotenv.config();
 
 const getEquipment = (membershipId: string) => {
-  // Add interface
-  const options: Object = {
+  const options: RequestOptions = {
     hostname: process.env.HOST_NAME,
     headers: { 'X-API-KEY': process.env.API_KEY },
     path: `/Platform/Destiny2/2/Profile/${membershipId}/?components=205`,
@@ -23,7 +22,7 @@ const getEquipment = (membershipId: string) => {
       const characters = Object.values(parsed);
       console.log(parsed);
 
-      // TODO: Create interfaces for parameters specified as any
+      // TODO: Assign type to character param
       characters.forEach((character: any) => {
         console.log('');
         console.log('||| Equipped Items |||');

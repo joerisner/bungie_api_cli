@@ -1,10 +1,9 @@
-import { get } from 'https';
+import { get, RequestOptions } from 'https';
 import dotenv from 'dotenv';
 dotenv.config();
 
 const getTotalTimePlayed = (membershipId: string) => {
-  // Add interface
-  const options: Object = {
+  const options: RequestOptions = {
     hostname: process.env.HOST_NAME,
     headers: { 'X-API-KEY': process.env.API_KEY },
     path: `/Platform/Destiny2/2/Profile/${membershipId}/?components=200`,
@@ -19,13 +18,13 @@ const getTotalTimePlayed = (membershipId: string) => {
 
     resp.on('end', () => {
       const parsed = JSON.parse(data);
-      const characters = parsed.Response.characters.data;
-      const hashes = Object.values(characters);
+      const characters = Object.values(parsed.Response.characters.data);
 
-      // TODO: Add interface for character object
-      hashes.forEach((character: any) => {
+      // TODO: Assign type to character param
+      characters.forEach((character: any) => {
         const minutes = parseInt(character.minutesPlayedTotal);
         const hours = Math.round(minutes / 60);
+
         if (character.classType == 0) {
           console.log(`Titan: ${hours} hours`);
         } else if (character.classType == 1) {
