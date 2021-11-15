@@ -1,10 +1,9 @@
-import { get } from 'https';
+import { get, RequestOptions } from 'https';
 import dotenv from 'dotenv';
 dotenv.config();
 
 const getClanMembers = (clanId: string) => {
-  // Add interface
-  const options: Object = {
+  const options: RequestOptions = {
     hostname: process.env.HOST_NAME,
     headers: { 'X-API-KEY': process.env.API_KEY },
     path: `/Platform/GroupV2/${clanId}/Members/`,

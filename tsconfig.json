@@ -4,14 +4,15 @@
     "lib": ["ES6", "DOM"],
     "module": "esnext",
     "moduleResolution": "node",
+    "noEmitOnError": true,
     "noUnusedLocals": true,
     "outDir": "./dist",
+    "removeComments": true,
     "resolveJsonModule": true,
     "rootDir": "./src",
     "strict": true,
     "target": "ES6",
     "types": []
   },
-  "exclude": ["./node_modules"],
-  "include": ["**/*.ts"]
+  "exclude": ["./node_modules"]
 }
