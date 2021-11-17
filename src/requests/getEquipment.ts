@@ -20,7 +20,6 @@ const getEquipment = (membershipId: string) => {
     resp.on('end', () => {
       const parsed = JSON.parse(data).Response.characterEquipment.data;
       const characters = Object.values(parsed);
-      console.log(parsed);
 
       // TODO: Assign type to character param
       characters.forEach((character: any) => {
