@@ -36,6 +36,6 @@ interface Character {
   percentToNextLevel: number;
   raceHash: number;
   raceType: 0 | 1 | 2;
-  stats?: {};
+  stats?: Record<string, unknown>;
   titleRecordHash?: number;
 }

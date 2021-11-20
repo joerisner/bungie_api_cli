@@ -18,8 +18,8 @@ const getClanMembers = (clanId: string) => {
 
     resp.on('end', () => {
       const members = JSON.parse(data).Response.results;
-      let offlineMembers: string[] = [];
-      let onlineMembers: string[] = [];
+      const offlineMembers: string[] = [];
+      const onlineMembers: string[] = [];
 
       console.log('');
       console.log(`Total Number of Members: ${members.length}`);

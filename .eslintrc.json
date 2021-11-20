@@ -1,0 +1,12 @@
+{
+  // https://eslint.org/docs/user-guide/configuring/configuration-files#extending-configuration-files
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "ignorePatterns": ["dist/"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["prettier"]
+}
