@@ -9,8 +9,7 @@ API requests to Bungie's endpoints for Destiny data
 3. Change the name of the `.env.example` file to `.env` and add your unique values
 4. Build the JS files: `yarn compile`
 
-JS files can be executed from the `./dist/requests` directory. For example:
-
-- ```shell
-  $ node dist/requests/getTotalTimePlayed.js
-  ```
+JS files can be executed from the `./dist/requests` directory like this:
+```shell
+$ node dist/requests/getTotalTimePlayed.js
+```
