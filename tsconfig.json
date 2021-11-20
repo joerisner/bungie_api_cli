@@ -5,7 +5,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "noEmitOnError": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "outDir": "./dist",
     "removeComments": true,
     "resolveJsonModule": true,
