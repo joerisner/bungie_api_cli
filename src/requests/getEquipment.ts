@@ -25,7 +25,7 @@ const getEquipment = (membershipId: string) => {
       characters.forEach((character: any) => {
         console.log('');
         console.log('||| Equipped Items |||');
-        let items = character.items;
+        const items = character.items;
         items.forEach((item: any) => {
           console.log(item.itemHash);
         });
